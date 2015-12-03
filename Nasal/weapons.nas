@@ -8,4 +8,3 @@ stop_MG = func {
 }
 
 var flash_trigger = props.globals.getNode("controls/armament/trigger", 0);
-

@@ -7,9 +7,9 @@ name "leftpanel"
 loc 0 0 -0
 data 9
 leftpanel
-texture "colors.png"
+texture "LeftPanel.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 16
 0.019671 0.080743 0.080436
 -0.019671 0.080743 0.080436

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>RightPanel.ac</path>
+
+  <animation>
+    <object-name>rightpanel</object-name>
+  </animation>
+
+  <!-- WARNINGS -->
+  <model>
+    <path>Aircraft/Bell-XFL-1/Models/Interior/Panel/Instruments/Warning/warning.xml</path>
+    <offsets>
+      <x-m>  0.021 </x-m>
+      <y-m> -0.087 </y-m>
+      <z-m> -0.044 </z-m>
+    </offsets>
+  </model>
+  
+</PropertyList>

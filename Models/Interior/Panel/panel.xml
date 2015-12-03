@@ -101,5 +101,24 @@
     </offsets>
   </model>
 
-</PropertyList>
+  <!-- flapsgear -->
+  <model>
+    <path>Aircraft/Bell-XFL-1/Models/Interior/Panel/Instruments/flapsgear/flapsgear.xml</path>
+    <offsets>
+      <x-m> -0.0160 </x-m>
+      <y-m>  0.0990 </y-m>
+      <z-m> -0.1860 </z-m>
+    </offsets>
+  </model>
 
+  <!-- Gun ship -->
+  <model>
+    <path>Aircraft/Bell-XFL-1/Models/Interior/Panel/N-9_Gunsight/N-9_Gunsight.xml</path>
+    <offsets>
+      <x-m> -0.0350 </x-m>
+      <y-m>  0.0000 </y-m>
+      <z-m>  0.1200 </z-m>
+    </offsets>
+  </model>
+ 
+</PropertyList>

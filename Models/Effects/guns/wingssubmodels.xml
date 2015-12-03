@@ -3,28 +3,44 @@
 <PropertyList>
 
   <cannon>
-    <model>Models/Geometry/tracer.xml</model>
+    <model>Aircraft/Bell-XFL-1/Models/Effects/guns/tracer.xml</model>
+    <trigger>controls/armament/trigger</trigger>
     <speed>2755.9</speed>
     <cd>0.193</cd>
-    <weight>0.286600941</weight>
     <eda>0.00338158219</eda>
-    <!--<pitch-offset>0</pitch-offset>-->
     <fuse-range>0</fuse-range>
+    <weight>0.286600941</weight>
     <life>40</life>
-    <trigger>controls/armament/trigger</trigger>
-    <expiry>true</expiry>
     <repeat>true</repeat>
     <delay>0.41</delay>
-    <count>33</count>
+    <!-- <count>33</count> -->
+    <count>-1</count>
     <wind>false</wind>
+    <expiry>true</expiry>
     <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
     <submodel-path>Aircraft/Bell-XFL-1/Models/Effects/guns/bullet-submodel.xml</submodel-path>
-    <impact-reports>sim/ai/aircraft/collision/cannon</impact-reports>
+    <yaw-offset>0</yaw-offset>
     <pitch-offset>0.1</pitch-offset>
   </cannon>
-
+  
+  <smoke>
+    <model>Aircraft/Bell-XFL-1/Models/Effects/guns/smoke.xml</model>
+    <trigger>controls/armament/trigger</trigger>
+    <speed>2755.9</speed>
+    <eda>0.00338158219</eda>
+    <repeat>true</repeat>
+    <delay>0.08</delay>
+    <count>160</count>
+    <yaw-offset>-60</yaw-offset>
+    <pitch-offset>-60</pitch-offset>
+    <wind>true</wind>
+    <buoyancy>33</buoyancy>
+    <life>5</life>
+  </smoke>
+  
   <submodel>
     <name>Left-wing-gun</name>
     <model alias="../../cannon/model"/>
@@ -41,34 +57,36 @@
     <wind alias="../../cannon/wind"/>
     <expiry alias="../../cannon/expiry"/>
     <collision alias="../../cannon/collision"/>
+    <collision-report alias="../../cannon/collision-report"/>
     <impact alias="../../cannon/impact"/>
+    <impact-report alias="../../cannon/impact-report"/>
     <submodel-path alias="../../cannon/submodel-path"/>
-    <x-offset>  6.42 </x-offset> <!-- -1.957 m =  6.42 ft -->
-    <y-offset> 10.01 </y-offset> <!-- -3.052 m = 10.01 ft -->
-    <z-offset> -1.54 </z-offset> <!-- -0.469 m = -1.54 ft -->
-    <yaw-offset>0</yaw-offset>
+    <yaw-offset  alias="../../cannon/yaw-offset"/>
     <pitch-offset alias="../../cannon/pitch-offset"/>
-  </submodel>
-
-  <submodel>
-    <name>Left-wing-smoke</name>
-    <model>Aircraft/Bell-XFL-1/Models/Effects/guns/smoke.xml</model>
-    <trigger alias="../../cannon/trigger"/>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>160</count>
     <x-offset>  6.42 </x-offset> <!-- -1.957 m =  6.42 ft -->
     <y-offset> 10.01 </y-offset> <!-- -3.052 m = 10.01 ft -->
     <z-offset> -1.54 </z-offset> <!-- -0.469 m = -1.54 ft -->
-    <yaw-offset>-60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
   </submodel>
-
+  
+  <submodel>
+    <name>left-wing-smoke</name>
+    <model alias="../../smoke/model"/>
+    <trigger alias="../../smoke/trigger"/>
+    <speed alias="../../smoke/speed"/>
+    <eda alias="../../smoke/eda"/>
+    <repeat alias="../../smoke/repeat"/>
+    <delay alias="../../smoke/delay"/>
+    <count alias="../../smoke/count"/>
+    <yaw-offset alias="../../smoke/yaw-offset"/>
+    <pitch-offset alias="../../smoke/pitch-offset"/>
+    <wind alias="../../smoke/wind"/>
+    <buoyancy alias="../../smoke/buoyancy"/>
+    <life alias="../../smoke/life"/>
+    <x-offset>  6.42 </x-offset> <!-- -1.957 m =  6.42 ft -->
+    <y-offset> 10.01 </y-offset> <!-- -3.052 m = 10.01 ft -->
+    <z-offset> -1.54 </z-offset> <!-- -0.469 m = -1.54 ft -->
+  </submodel>
+  
   <submodel>
     <name>Right-wing-gun</name>
     <model alias="../../cannon/model"/>
@@ -85,34 +103,36 @@
     <wind alias="../../cannon/wind"/>
     <expiry alias="../../cannon/expiry"/>
     <collision alias="../../cannon/collision"/>
+    <collision-report alias="../../cannon/collision-report"/>
     <impact alias="../../cannon/impact"/>
+    <impact-report alias="../../cannon/impact-report"/>
     <submodel-path alias="../../cannon/submodel-path"/>
-    <x-offset>   6.42 </x-offset> <!-- -1.957 m =   6.42 ft -->
-    <y-offset> -10.01 </y-offset> <!--  3.052 m = -10.01 ft -->
-    <z-offset>  -1.54 </z-offset> <!-- -0.469 m =  -1.54 ft -->
-    <yaw-offset>0</yaw-offset>
+    <yaw-offset  alias="../../cannon/yaw-offset"/>
     <pitch-offset alias="../../cannon/pitch-offset"/>
-  </submodel>
-
-  <submodel>
-    <name>Right-wing-smoke</name>
-    <model>Aircraft/Bell-XFL-1/Models/Effects/guns/smoke.xml</model>
-    <trigger alias="../../cannon/trigger"/>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>160</count>
     <x-offset>   6.42 </x-offset> <!-- -1.957 m =   6.42 ft -->
     <y-offset> -10.01 </y-offset> <!--  3.052 m = -10.01 ft -->
     <z-offset>  -1.54 </z-offset> <!-- -0.469 m =  -1.54 ft -->
-    <yaw-offset>-60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
   </submodel>
-
+  
+  <submodel>
+    <name>right-wing-smoke</name>
+    <model alias="../../smoke/model"/>
+    <trigger alias="../../smoke/trigger"/>
+    <speed alias="../../smoke/speed"/>
+    <eda alias="../../smoke/eda"/>
+    <repeat alias="../../smoke/repeat"/>
+    <delay alias="../../smoke/delay"/>
+    <count alias="../../smoke/count"/>
+    <yaw-offset alias="../../smoke/yaw-offset"/>
+    <pitch-offset alias="../../smoke/pitch-offset"/>
+    <wind alias="../../smoke/wind"/>
+    <buoyancy alias="../../smoke/buoyancy"/>
+    <life alias="../../smoke/life"/>
+    <x-offset>   6.42 </x-offset> <!-- -1.957 m =   6.42 ft -->
+    <y-offset> -10.01 </y-offset> <!--  3.052 m = -10.01 ft -->
+    <z-offset>  -1.54 </z-offset> <!-- -0.469 m =  -1.54 ft -->
+  </submodel>
+  
   <animation>
     <type>select</type>
     <object-name>Left-wing-gun</object-name>
@@ -125,4 +145,3 @@
   </animation>
 
 </PropertyList>
-
