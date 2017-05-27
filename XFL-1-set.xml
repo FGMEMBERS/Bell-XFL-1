@@ -9,6 +9,19 @@
 
     <flight-model>yasim</flight-model>
     <aero>XFL-1-yasim</aero>
+
+    <tags>
+      <tag>bell</tag>
+      <tag>low-wing</tag>
+      <tag>tail-dragger</tag>
+      <tag>retractable-gear</tag>
+      <tag>single-engine</tag>
+      <tag>piston</tag>
+      <tag>carrier</tag>
+      <tag>experimental</tag>
+      <tag>fighter</tag>
+      <tag>1940s</tag>
+    </tags>
     
     <rating>
       <FDM type="int">     2 </FDM>
